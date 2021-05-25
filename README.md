@@ -5,20 +5,35 @@ This project provides a desktop environment geared for data science. It is meant
 
 Kasm Workspaces is a container streaming platform that provides browser-based access to desktops, applications, and web services. Kasm uses a modern DevSecOps approach for programmatic delivery of services via Containerized Desktop Infrastructure (CDI) technology to create on-demand Docker containers that are accessible via web browser. The rendering of the graphical-based containers is powered by the open-source project  [**KasmVNC**](https://github.com/kasmtech/KasmVNC?utm_campaign=Dockerhub&utm_source=docker)
 
-![Screenshot][Kasm_Workflow]
+![Screenshot](resources/kasm_workflow_1440.gif)
 
 Kasm Workspaces was developed by a team of cybersecurity experts to meet the most demanding secure collaboration requirements.  Our solution makes use of the latest technology in DevOps to establish an architecture that is highly scalable, customizable, and easy to maintain.  Most importantly, Kasm provides a solution, rather than a service, so it is infinitely customizable to your unique requirements and includes a developer API so that it can be integrated with, rather than replace, your existing applications and workflows.
 
-## Live Demo
-A self-guided on-demand demo is available at [**kasmweb.com**](https://www.kasmweb.com/demo.html?utm_campaign=Dockerhub&utm_source=docker)
+# Install Kasm Workspaces
 
+Get the link to the latest install package from [Kasm Downloads](https://www.kasmweb.com/downloads.html?utm_campaign=Dockerhub&utm_source=docker)
 
-[**Workspaces**](https://www.kasmweb.com/kasm_server.html?utm_campaign=Dockerhub&utm_source=docker) can be deployed in the cloud (Public or Private), on-premise (Including Air-Gapped Networks), or in a hybrid configuration. Kasm also offers Workspaces as a fully managed SaaS. 
+```
+wget https://<latest-kasm-version-url>
+tar -xzvf kasm*.tar.gz
+sudo kasm_release/install.sh
+```
 
-The Kasm team publishes applications and desktop images for use inside the platform. More information, including source can be found in the [Images Documentation](https://kasmweb.com/docs/latest/guide/custom_images.html?utm_campaign=Dockerhub&utm_source=docker)
+When the installation is complete it will output randomly generated credentials.
 
+# Build Image
 
-{about}
+On the server that Kasm Workspaces is deployed on, build the image. You can also build this image in a pipeline and push to a central respository. Workspaces can point to a central repository and can automatically pull images when they are updated.
+
+```
+sudo docker build -t kasmweb/datascience:1.9.0 .
+```
+
+# Update Kasm Workspaces
+
+Add a new Workspace image to the deployment. 
+
+![Screenshot](resources/KasmAddNewImage.gif)
 
 # Manual Deployment
 
