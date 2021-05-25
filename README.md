@@ -31,16 +31,16 @@ sudo docker build -t kasmweb/datascience:1.9.0 .
 
 # Update Kasm Workspaces
 
-Add a new Workspace image to the deployment. 
+Add a new Workspace image to the deployment and launch. 
 
-![Screenshot](resources/KasmAddNewImage.gif)
+![Screenshot](resources/Create_Workspace_Image.gif)
 
 # Manual Deployment
 
 While this image is primarily built to run inside the Kasm platform, it can also be executed manually.  Please note that certain functionality, such as audio, is only available within the Kasm platform.
 
 ```
-sudo docker run --rm  -it --shm-size=512m -p 6901:6901 -e VNC_PW=password kasmweb/<image>:<tag>
+sudo docker run --rm  -it --shm-size=512m -p 6901:6901 -e VNC_PW=password kasmweb/datascience:1.9.0
 ```
 
 The container is now accessible via a browser : `https://<IP>:6901`
