@@ -48,6 +48,9 @@ The container is now accessible via a browser : `https://<IP>:6901`
  - **User** : `kasm_user`
  - **Password**: `password`
 
+# Help Us Make It Better
+
+Please make a merge request or submit an issue to help us make this a better product for the community. We would greatly appreciate your feedback.
 
 # Tags
 
