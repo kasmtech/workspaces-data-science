@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=RStudio
+Comment=
+Icon=gnome-fs-bookmark
+URL=http://127.0.0.1:8787/
